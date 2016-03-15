@@ -13,7 +13,7 @@
 [plugin]
   id = 88876
   name = "suricata-dns-enhanced"
-  version = "v1.0.0"
+  version = "v1.0.1"
   description = ""
   log_file = "/var/log/suricata-dns.out.log"
   website = "https://gitlab.sedara.io/av-plugins/suricata-dns-enhanced"
