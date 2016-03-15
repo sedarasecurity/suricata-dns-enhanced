@@ -1,7 +1,7 @@
 [[regexes]]
-  name = "example regex entry"
-  description = "example regex entry description"
-  re = "(?P<msg>.*)"
+  name = "Suricata DNS Entry"
+  description = ""
+  re = '''level=\S+\smsg=(?P<udone>\S+)\sdestip=(?P<resolvdstip>\IPV4)\sdestport=(?P<resolvdstport>\PORT)\sqtype=(?P<udtwo>\S+)\squery=(?P<udthree>\S+)\sresponse=(\")?(?P<udfour>[^\"].+[^\"])(\")?\ssourceip=(?P<resolvsrcip>\IPV4)\ssourceport=(?P<srcport>\PORT)'''
 
 [options]
   show_matches = true
@@ -11,11 +11,11 @@
   show_multiple_matches = false
 
 [plugin]
-  id = 8876
+  id = 88876
   name = "suricata-dns-enhanced"
   version = "v1.0.0"
   description = ""
-  log_file = "/var/log/suricata-dns.log"
+  log_file = "/var/log/suricata-dns.out.log"
   website = "https://gitlab.sedara.io/av-plugins/suricata-dns-enhanced"
   log_format = "-"
 
