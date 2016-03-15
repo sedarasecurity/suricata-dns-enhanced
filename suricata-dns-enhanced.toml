@@ -1,7 +1,7 @@
 [[regexes]]
   name = "Suricata DNS Entry"
   description = ""
-  re = '''level=\S+\smsg=(?P<udone>\S+)\sdestip=(?P<resolvdstip>\IPV4)\sdestport=(?P<resolvdstport>\PORT)\sqtype=(?P<udtwo>\S+)\squery=(?P<udthree>\S+)\sresponse=(\")?(?P<udfour>[^\"].+[^\"])(\")?\ssourceip=(?P<resolvsrcip>\IPV4)\ssourceport=(?P<srcport>\PORT)'''
+  re = '''level=\S+\smsg=(?P<udone>\S+)\sdestip=(?P<resolvdstip>\IPV4)\sdestport=(?P<resolvdstport>\PORT)\snettype=(?P<udfive>(?P<pluginsid>\d))\sqtype=(?P<udtwo>\S+)\squery=(?P<udthree>\S+)\sresponse=(\")?(?P<udfour>[^\"].+[^\"])(\")?\ssourceip=(?P<resolvsrcip>\IPV4)\ssourceport=(?P<srcport>\PORT)\stxtype=(?P<udsix>\d)'''
 
 [options]
   show_matches = true
@@ -13,7 +13,7 @@
 [plugin]
   id = 88876
   name = "suricata-dns-enhanced"
-  version = "v1.0.1"
+  version = "v1.0.2"
   description = ""
   log_file = "/var/log/suricata-dns.out.log"
   website = "https://gitlab.sedara.io/av-plugins/suricata-dns-enhanced"
