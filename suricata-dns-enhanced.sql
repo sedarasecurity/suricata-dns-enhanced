@@ -7,4 +7,4 @@ INSERT INTO `plugin_sid` (`plugin_id`,`sid`,`category_id`,`subcategory_id`,`reli
 INSERT INTO `plugin_sid` (`plugin_id`,`sid`,`category_id`,`subcategory_id`,`reliability`,`priority`,`name`) VALUES (88876, 4, 15, 18, 2, 2, 'Suricata DNS: External Query for Internal Resource');
 INSERT INTO `plugin_sid` (`plugin_id`,`sid`,`category_id`,`subcategory_id`,`reliability`,`priority`,`name`) VALUES (88876, 5, 15, 18, 2, 2, 'Suricata DNS: Internal Query for External Resource');
 INSERT INTO `plugin_sid` (`plugin_id`,`sid`,`category_id`,`subcategory_id`,`reliability`,`priority`,`name`) VALUES (88876, 6, 15, 18, 2, 2, 'Suricata DNS: FQDN Query');
-INSERT INTO `plugin_sid` (`plugin_id`,`sid`,`category_id`,`subcategory_id`,`reliability`,`priority`,`name`) VALUES (88876, 100, 8, 57, 2, 2, 'Suricata DNS: Response Session');
+INSERT INTO `plugin_sid` (`plugin_id`,`sid`,`category_id`,`subcategory_id`,`reliability`,`priority`,`name`) VALUES (88876, 100, 8, 57, 2, 2, 'Suricata DNS: Response value');

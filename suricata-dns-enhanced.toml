@@ -6,7 +6,7 @@
 [[regexes]]
   name = "Suricata DNS Response Entry"
   description = ""
-  re = '''.*msg=dns-response-entry\sdestination=(?P<dstip>\IPV4)\sid=(?P<udone>\S+)\ssourceip=(?P<srcip>\IPV4)'''
+  re = '''.*msg=dns-response-value\sdestination=(?P<dstip>\IPV4)\sid=(?P<udone>\S+)\ssourceip=(?P<srcip>\IPV4)'''
 
 [options]
   show_matches = true
@@ -18,7 +18,7 @@
 [plugin]
   id = 88876
   name = "suricata-dns-enhanced"
-  version = "v1.0.5"
+  version = "v1.0.6"
   description = ""
   log_file = "/var/log/suricata-dns-daemon.out.log"
   website = "https://gitlab.sedara.io/av-plugins/suricata-dns-enhanced"
