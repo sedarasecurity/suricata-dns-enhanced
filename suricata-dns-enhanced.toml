@@ -3,6 +3,11 @@
   description = ""
   re = '''level=\S+\smsg=(?P<udone>\S+)\sdestip=(?P<resolvdstip>\IPV4)\sdestport=(?P<resolvdstport>\PORT)\snettype=(?P<udfive>(?P<pluginsid>\d))\sqtype=(?P<udtwo>\S+)\squery=(?P<udthree>\S+)\sresponse=(\")?(?P<udfour>[^\"].+[^\"])(\")?\ssourceip=(?P<resolvsrcip>\IPV4)\ssourceport=(?P<srcport>\PORT)\stxtype=(?P<udsix>\d)'''
 
+[[regexes]]
+  name = "Suricata DNS Response Entry"
+  description = ""
+  re = '''.*msg=dns-response-entry\sdestination=(?P<dstip>\IPV4)\sid=(?P<udone>\S+)\ssourceip=(?P<srcip>\IPV4)'''
+
 [options]
   show_matches = true
   show_misses = false
@@ -13,9 +18,9 @@
 [plugin]
   id = 88876
   name = "suricata-dns-enhanced"
-  version = "v1.0.2"
+  version = "v1.0.5"
   description = ""
-  log_file = "/var/log/suricata-dns.out.log"
+  log_file = "/var/log/suricata-dns-daemon.out.log"
   website = "https://gitlab.sedara.io/av-plugins/suricata-dns-enhanced"
   log_format = "-"
 
