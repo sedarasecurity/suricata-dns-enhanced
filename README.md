@@ -1,23 +1,23 @@
 suricata-dns-enhanced
-=====================
+=================
 
-## Installation
-Please install the [suricata-dns-daemon](https://gitlab.sedara.io/av-plugin-daemons/suricata-dns-daemon)
+AlienVault plugin for Open Information Security Foundation Suricata DNS
 
-## Event Property Key
-* userdata1: unique message id MD5(suricata message id + date)
-* userdata2: query type
-* userdata3: record that was queried
-* userdata4: response of query from destination
-
-### Userdata4 format
+# Installation
+## Download the plugin
+This should be ran on the Server, AIO or Sensor where you want to capture the Open Information Security Foundation logs from.
 
 ```
-<record type>:<value> [; ...]
-
-e.g:
-
-A:1.2.3.4
-or
-CNAME:a.b.c.z;A:1.2.3.4
+wget https://raw.githubusercontent.com/sedarasecurity/suricata-dns-enhanced/master/suricata-dns-enhanced.cfg -O /etc/ossim/agent/plugins/suricata-dns-enhanced.cfg
 ```
+
+## Import the plugin SIDs
+This should be ran on the Server or AIO.
+
+```
+wget https://raw.githubusercontent.com/sedarasecurity/suricata-dns-enhanced/master/suricata-dns-enhanced.sql -O /tmp/suricata-dns-enhanced.sql
+ossim-db < /tmp/suricata-dns-enhanced.sql
+rm -f /tmp/suricata-dns-enhanced.sql
+```
+
+
