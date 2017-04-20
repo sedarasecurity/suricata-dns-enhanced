@@ -1,0 +1,10 @@
+/var/log/suricata-dns-daemon.log
+/var/log/suricata/dns.log
+{
+  daily
+  rotate 4
+  missingok
+  notifempty
+  copytruncate
+  compress
+}
